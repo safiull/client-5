@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <title>Zhizhui Technology</title>
+    <!-- Bootstrap css link -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <script>
+        ! function(e) {
+            "use strict";
+            var n = function(n, t, o) {
+                var i, r = e.document,
+                    d = r.createElement("link");
+                if (t) i = t;
+                else {
+                    var a = (r.body || r.getElementsByTagName("head")[0]).childNodes;
+                    i = a[a.length - 1]
+                }
+                var l = r.styleSheets;
+                d.rel = "stylesheet", d.href = n, d.media = "only x",
+                    function e(n) {
+                        if (r.body) return n();
+                        setTimeout(function() {
+                            e(n)
+                        })
+                    }(function() {
+                        i.parentNode.insertBefore(d, t ? i : i.nextSibling)
+                    });
+                var f = function(e) {
+                    for (var n = d.href, t = l.length; t--;)
+                        if (l[t].href === n) return e();
+                    setTimeout(function() {
+                        f(e)
+                    })
+                };
+
+                function s() {
+                    d.addEventListener && d.removeEventListener("load", s), d.media = o || "all"
+                }
+                return d.addEventListener && d.addEventListener("load", s), d.onloadcssdefined = f, f(s), d
+            };
+            "undefined" != typeof exports ? exports.loadCSS = n : e.loadCSS = n
+        }("undefined" != typeof global ? global : this);
+        loadCSS("https://fonts.googleapis.com/css?family=Rajdhani:400,700|Merriweather:400,700");
+        loadCSS("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css");
+        loadCSS("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css");
+    </script>
+    <link rel="shortcut icon" href="images/logo-icon.png" />
+    <style type="text/css" id="wp-custom-css">
+        .site-footer .flex--sm-right a {
+            margin-top: 8px;
+            display: inline-block;
+        }
+        
+        .home-craft__icon {
+            font-size: 48px;
+        }
+        
+        .home-reason .box--simple__icon {
+            font-size: 24px;
+            line-height: 64px;
+        }
+        
+        .box--clean__icon {
+            font-size: 42px;
+        }
+        
+        .box--elegant__icon {
+            font-size: 24px;
+            line-height: 68px;
+        }
+        
+        .box--link__icon {
+            font-size: 24px;
+        }
+        
+        .copyright .link {
+            position: relative;
+            top: 0 !important;
+            margin: 0;
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-color: #eee;
+            width: 100%;
+        }
+        
+        table tr,
+        table td {
+            border: 1px solid #000;
+        }
+        
+        @media only screen and (min-width: 768px) {
+            .site-footer .flex--sm-right a {
+                position: relative;
+                top: 5px;
+                padding-left: 11px;
+            }
+        }
+        
+        code,
+        kbd,
+        pre,
+        samp {
+            white-space: pre-wrap;
+        }
+        
+        .site-header .Zhizhui Soft-logo img {
+            max-height: 70px;
+        }
+    </style>
+    <style>
+        ._contact__formDiv,
+        ._contactPage__form,
+        ._contactForm {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        ._form {
+            /* position: relative; */
+        }
+        
+        ._loader {
+            z-index: 100;
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: #fff url(images/loader.gif) center center no-repeat;
+        }
+        
+        ._form ._loader {
+            position: absolute;
+        }
+        
+        ._form__msg {
+            display: block;
+            margin-top: 30px;
+            font-size: 15px;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        ._form__msg._success {
+            color: #4CAF50;
+        }
+        
+        ._form__msg._error {
+            color: #F44336;
+        }
+        
+        .datepicker table {
+            font-size: 12px;
+        }
+        
+        ._blogPage__formDiv {
+            position: sticky !important;
+        }
+
+        /* ######################## */
+        /* New Code start form here */
+        /* ######################## */
+        .second-sidebar p{
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .second-sidebar h4{
+            margin-bottom: 10px;
+            margin-top: 12px;
+        }
+        .second-sidebar a{
+            display: block;
+        }
+        ._laravelDev__banner{
+            background: none;
+        }
+        ._header {
+            background: #1044a2;
+        }
+        @media (max-width: 767px) {
+            .first-sidebar .sidebar-1{
+                width: 40%;
+                margin: 0 auto;
+            }
+        }
+        @media (max-width: 520px) {
+            .first-sidebar .sidebar-1{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body class="home page-template-default page page-id-5">
+
+    <!--========= Header section starts here ============== -->
+    <header class="_header">
+        <!-- Top header  section  start-->
+        <div class="_header__top">
+            <div class="container _header__topContainer _flexStyle">
+                <div class="_header__topLeft">
+                    <div class="_logoContainer _flexStyle">
+                        <!-- logo -->
+                        <div class="logo ">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/logo.png" alt="" class="img-fluid">
+                            </a>
+                            <a class="_logoText" href="index.html">
+                                <p><i class="fas fa-home"></i> Back to home</p>
+                            </a>
+                        </div>
+                        <div class="_slogan">
+                            ISO 9001:2015
+                            <br>Certified Company </div>
+                    </div>
+                </div>
+                <div class="_header__topRight">
+                    <div class="_header__contact">
+                        <a id="scheduleBtn">Schedule Time To Talk</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top header section  end -->
+
+        <!-- Header nav section  start -->
+        <div class="_header__nav">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+
+                    <div class="_header__navLeft">
+                        <a href="index.html" class="_navLeft__logo">
+                            <img src="images/logo-icon.png" alt="" class="img-fluid">
+                        </a>
+                        <a href="tel:9854666444" class="_navLeft__phone">
+                            <img src="images/telephone-white.svg" alt=""><span></span>+91 98368-63282 </a>
+                    </div>
+
+                    <!-- nav section -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+                        <div class="navbar-toggler-icon">
+                            <div class="bar bar-1"></div>
+                            <div class="bar bar-1"></div>
+                            <div class="bar bar-1"></div>
+                        </div>
+                    </button>
+
+                    <div class="_navMain collapse navbar-collapse" id="navbarsExample05">
+
+                        <div class="menu-main-menu-container">
+                            <ul id="menu-main-menu" class="menu">
+                                <li id="menu-item-1924" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item menu-item-1924"><a href="index.html" aria-current="page">Home</a></li>
+                                <li id="menu-item-1925" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1925"><a href="portfolio.html">Portfolio</a></li>
+                                <li id="menu-item-1926" class="_m__services menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1926"><a href="services.html">Services</a>
+                                    <ul class="sub-menu">
+                                        <li id="menu-item-2327" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2327"><a title="Our Services Can Simplify Your Business Processes" href="#">Our Services</a></li>
+                                        <li id="menu-item-1930" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1930"><a title="Developing Unthinkable Solutions" href="#">Web Development</a>
+                                            <ul class="sub-menu">
+                                                <li id="menu-item-2328" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2328"><a href="#">Web Development</a></li>
+                                                <li id="menu-item-2367" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2367"><a href="web-design-and-development.html">Web Design and Development</a></li>
+                                                <li id="menu-item-2354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2354"><a href="codeIgniter-development-service.html">CodeIgniter Development Service</a></li>
+                                                <li id="menu-item-2381" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2381"><a href="#">Ecommerce Website Development</a></li>
+                                                <li id="menu-item-2356" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2356"><a href="laravel-development.html">Laravel Development</a></li>
+                                                <li id="menu-item-2357" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2357"><a href="magento-development-service.html">Magento Development</a></li>
+                                                <li id="menu-item-2358" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2358"><a href="php-development.html">PHP Development</a></li>
+                                                <li id="menu-item-2360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2360"><a href="wordpress-development.html">WordPress Development</a></li>
+                                                <li id="menu-item-2359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2359"><a href="responsive-website-design.html">Responsive Website Development</a></li>
+                                                <li id="menu-item-1975" class="_softDev menu-item menu-item-type-post_type menu-item-object-page menu-item-1975"><a href="custom-software.html">Software Development Solutions</a></li>
+                                            </ul>
+                                        </li>
+                                        <li id="menu-item-1927" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1927"><a title="Bringing Modern Technologies Together" href="website-development-services.html">Modern Development</a>
+                                            <ul class="sub-menu">
+                                                <li id="menu-item-1931" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1931"><a href="#">Modern Development</a></li>
+                                                <li id="menu-item-2362" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2362"><a href="angularjs-development.html">Angularjs Development</a></li>
+                                                <li id="menu-item-2363" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2363"><a href="nodejs-development.html">Nodejs Development</a></li>
+                                                <li id="menu-item-2364" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2364"><a href="react-native-development-service.html">React Native Development</a></li>
+                                                <li id="menu-item-2365" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2365"><a href="reactjs-development.html">Reactjs Development</a></li>
+                                                <li id="menu-item-2366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2366"><a href="vuejs-development.html">Vuejs Development</a></li>
+                                            </ul>
+                                        </li>
+                                        <li id="menu-item-2375" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2375"><a title="One Touch Solutions That Build Brands" href="mobile-app-services.html">Mobile App Development</a>
+                                            <ul class="sub-menu">
+                                                <li id="menu-item-2380" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2380"><a href="mobile-app-services.html">Mobile App Development</a></li>
+                                                <li id="menu-item-2376" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2376"><a href="hybrid-app-development.html">Hybrid App Development</a></li>
+                                                <li id="menu-item-2377" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2377"><a href="android-app-development.html">Android App Development</a></li>
+                                                <li id="menu-item-2378" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2378"><a href="ios-app-development.html">iOS App Development</a></li>
+                                            </ul>
+                                        </li>
+                                        <li id="menu-item-2342" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2342"><a title="Catering Creativity with Positive Results" href="#">Creative Designing</a>
+                                            <ul class="sub-menu">
+                                                <li id="menu-item-2344" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2344"><a href="#">Creative Designing</a></li>
+                                                <li id="menu-item-2369" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2369"><a href="graphics-design-services.html">Graphics Design</a></li>
+                                                <li id="menu-item-1943" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1943"><a href="#">Logo Design</a></li>
+                                                <li id="menu-item-2343" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2343"><a href="#">Packaging Design</a></li>
+                                                <li id="menu-item-2373" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2373"><a href="#">Brochure Design</a></li>
+                                            </ul>
+                                        </li>
+                                        <li id="menu-item-2345" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2345"><a title="Building Relationships, Building Brands" href="#">360° Digital Marketing</a>
+                                            <ul class="sub-menu">
+                                                <li id="menu-item-2348" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2348"><a href="#">Marketing</a></li>
+                                                <li id="menu-item-1937" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1937"><a href="#">Strategy And Consultation</a></li>
+                                                <li id="menu-item-2371" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2371"><a href="seo-company-kolkata.html">Search Engine Optimization (SEO)</a></li>
+                                                <li id="menu-item-1939" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1939"><a href="#">Social Media Optimization (SMO)</a></li>
+                                                <li id="menu-item-2346" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2346"><a href="#">Pay Per Click (PPC)</a></li>
+                                                <li id="menu-item-2370" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2370"><a href="content-writing.html">Content Writing</a></li>
+                                            </ul>
+                                        </li>
+                                        <li id="menu-item-2379" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2379"><a title="We Maintain Your Site Like It’s Our Own" href="website-maintenance.html">Website Maintenance</a></li>
+                                        <li id="menu-item-1948" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1948"><a href="get-a-quote.html">Get Free Quote</a></li>
+                                    </ul>
+                                </li>
+                                <li id="menu-item-1949" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1949"><a href="about-us.html">About</a>
+                                    <ul class="sub-menu">
+                                        <li id="menu-item-2351" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2351"><a title="Web Wizards Who Bring Imagination to Digital Reality" href="#">About Us</a></li>
+                                        <li id="menu-item-1950" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1950"><a title="Know About Our Journey to the Top" href="about-us.html">About Us</a></li>
+                                        <li id="menu-item-1951" class="_m__howWeWork menu-item menu-item-type-post_type menu-item-object-page menu-item-1951"><a title="Work Strategy That Always Outshines" href="how-we-work.html">How We Work</a></li>
+                                        <li id="menu-item-1952" class="_m__howWeProceed menu-item menu-item-type-post_type menu-item-object-page menu-item-1952"><a title="Work Process That Assures Success" href="how-we-proceed.html">How We Proceed</a></li>
+                                        <li id="menu-item-1953" class="_m__ourCapabilities menu-item menu-item-type-post_type menu-item-object-page menu-item-1953"><a title="Finest Technological Skills Served" href="our-capabilities.html">Our Capabilities</a></li>
+                                        <li id="menu-item-1954" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1954"><a href="#">Download Our Brochure</a></li>
+                                    </ul>
+                                </li>
+                                <li id="menu-item-1955" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1955"><a href="#">Next Gen</a>
+                                    <ul class="sub-menu">
+                                        <li id="menu-item-2350" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2350"><a title="Our Futuristic Solutions Can Save Your Tomorrow!" href="#">Next Gen</a></li>
+                                        <li id="menu-item-1956" class="_m__ai menu-item menu-item-type-custom menu-item-object-custom menu-item-1956"><a title="Laying Intelligence on Machines" href="#">Artificial Intelligence</a></li>
+                                        <li id="menu-item-1957" class="_m__iot menu-item menu-item-type-post_type menu-item-object-page menu-item-1957"><a title="Connecting Devices to the Web" href="iot-development.html">IOT Development</a></li>
+                                        <li id="menu-item-1958" class="_m__blockchain menu-item menu-item-type-custom menu-item-object-custom menu-item-1958"><a title="Building Secure and Modern Web" href="#">Blockchain</a></li>
+                                        <li id="menu-item-1959" class="_m__chatbot menu-item menu-item-type-custom menu-item-object-custom menu-item-1959"><a title="Developing Better Communication" href="#">Chatbot</a></li>
+                                        <li id="menu-item-1960" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1960"><a href="get-a-quote.html">Get Free Quote</a></li>
+                                    </ul>
+                                </li>
+                                <li id="menu-item-1961" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1961"><a href="contact-us.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </nav>
+                <!-- nav section end -->
+            </div>
+        </div>
+        <!-- Header nav section end -->
+    </header>
+    <!--========= Header section ends here ============== -->
+
+    <!-- main section begin -->
+    
+    <main class="main_body _innerPage">
+
+    <!--=========Inner Banner section starts here ============== -->
+
+    
+    <div class="_innerBanner _laravelDev__banner _patternt__1  _textContent__middle">
+        <div class="container _innerBannerContainer">
+            <!-- /* ######################## */ -->
+            <!-- /* New Code start form here */ -->
+            <!-- /* ######################## */ -->
+            <div class="bg-light">
+                <h2 class="text-dark p-3 mb-0">My Title</h2>
+                <div class="row">
+                <div class="col-md-8">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img class="d-block w-100" src="img/slider.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="img/slider.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="img/slider.jpg" alt="Third slide">
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                </div>
+                <div style="background: #F0F0F0; border-radius: 3px;" class="col-md-4 text-center text-dark first-sidebar">
+                    <h6 class="text-dark mb-2 mt-3">Price</h6>
+                    <h4 class="text-success mb-2">$500.00</h4>
+                    <button style="border-radius: 29px;" class="btn btn-primary">Request Demo</button>
+                    <h4 class="mt-2">885 Sales</h4>
+                    <div class="text-left sidebar-1">
+                        <p class="text-dark"><i class="fas fa-check text-success pr-4"></i>Autometically Instant Download</p>
+                        <p class="text-dark"><i class="fas fa-check text-success pr-4"></i>Price Includes All The Taxes</p>
+                        <p class="text-dark"><i class="fas fa-check text-success pr-4"></i>Installation Support</p>
+                        <p class="text-dark"><i class="fas fa-check text-success pr-4"></i>Included Futuer Updates</p>
+                        <p class="text-dark pb-2"><i class="fas fa-check text-success pr-4"></i>3 Months Technical Support</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!--========= Inner Banner section end here ============== -->
+
+    <!--========= Client  section starts here ================= -->
+
+</main>
+<!-- ####### Content part start from here ####### -->
+
+
+<div class="clearfix"></div>
+
+
+<!-- ####### Content part end from here ####### -->
+    
+    
+    <!-- main section begin -->
+    
+
+    <footer class="_footer">
+
+        <!--========== Footer contact starts here  ======== -->
+        <div class="_footer__contact  _divPadding">
+            <div class="container">
+                <div style="min-height: 800px" class="">
+                    <div class="row">
+                        <div class="col-md-8 text-dark">
+                            <div style="min-height: 700px;" class="">
+                                <textarea rows="40" placeholder="Enter your text" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div style="background: #F0F0F0; border-radius: 3px;" class="col-md-4 text-dark second-sidebar">
+                            <h4>Last Update</h4>
+                            <p>28/Aug/2020</p>
+                            <h4>Created</h4>
+                            <p>28/Aug/2020</p>
+                            <h4>Gutenburg Optimized</h4>
+                            <p class="text-primary">Yes</p>
+                            <h4>High Resulations</h4>
+                            <p class="text-primary">Yes</p>
+                            <h4>Compatible Browsers</h4>
+                            <a>Lorem ipsum dolor sit amet, </a>
+                            <h4>Compatible With</h4>
+                            <a href="#">Lorem ipsum dolor sit amet, </a>
+                            <a href="#">Lorem ipsum dolor sit amet, </a>
+                            <a href="#">Lorem ipsum dolor sit amet, </a>
+                            <a href="#">Lorem ipsum dolor sit amet, </a>
+
+                            <h4>Files Included</h4>
+                            <a href="#">Java Script, JS, CSS, PHP </a>
+
+                            <h4>Software Version</h4>
+                            <a href="#">WordPress 6.4.x</a>
+                            <a href="#">WordPress 6.3.x</a>
+                            <a href="#">WordPress 6.2.x</a>
+                            <a href="#">WordPress 6.1.x</a>
+
+                            <h4>Tags</h4>
+                            <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /* ######################## */ -->
+        <!-- /*  New Code end form here  */ -->
+        <!-- /* ######################## */ -->
+
+
+        <!--========== Footer contact  end here  ======== -->
+
+        <!--========== Footer advantage start  ======== -->
+        <div class="_advantage">
+            <div class="container">
+                <ul class="_advantage__list">
+                    <li>
+                        <span class="_icon">
+					<!-- <img src="/images/transparency-icon.png" alt="service area" class="img-fluid"> -->
+				</span>
+                        <span class="_advantage__text">Transparency at<br> Every State of Project</span>
+                    </li>
+                    <li>
+                        <span class="_icon">
+					<!-- <img src="/images/ontime-icon.png" alt="service area" class="img-fluid"> -->
+				</span>
+                        <span class="_advantage__text">On Time Delivery<br> focused on Results </span>
+                    </li>
+                    <li>
+                        <span class="_icon">
+					<!-- <img src="/images/ourteam-icon.png" alt="service area" class="img-fluid"> -->
+				</span>
+                        <span class="_advantage__text">A team of 100+<br>  Industry Experts</span>
+                    </li>
+                    <li>
+                        <span class="_icon">
+					<!-- <img src="/images/technicle-support.png" alt="service area" class="img-fluid"> -->
+				</span>
+                        <span class="_advantage__text">12 Month Free<br> Technical Support *</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--========== Footer advantage end  ======== -->
+
+        <!--========== Quick links start  ======== -->
+        <div class="_footerLinks">
+
+            <div class="_footerLinks__top _divPadding">
+                <div class="container">
+                    <div class="row">
+                        <div id="nav_menu-2" class="_widget widget_nav_menu">
+                            <h3 class="_widget__title">OUR SERVICES</h3>
+                            <div class="menu-our-services-container">
+                                <ul id="menu-our-services" class="menu">
+                                    <li id="menu-item-1984" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1984"><a href="graphics-design-services.html">Graphics Design</a></li>
+                                    <li id="menu-item-1985" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1985"><a href="website-development-services.html">Website Development</a></li>
+                                    <li id="menu-item-1986" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1986"><a href="mobile-app-services.html">Mobile App Development</a></li>
+                                    <li id="menu-item-1987" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1987"><a href="content-writing.html">Content Writing</a></li>
+                                    <li id="menu-item-1988" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1988"><a href="website-maintenance.html">Website Maintenance</a></li>
+                                    <li id="menu-item-1990" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1990"><a href="custom-software.html">Software Development</a></li>
+                                    <li id="menu-item-1991" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1991"><a href="seo-company-kolkata.html">SEO Services</a></li>
+                                    <li id="menu-item-1992" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1992"><a href="#">Strategy &#038; Consulting</a></li>
+                                    <li id="menu-item-1993" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1993"><a href="#">Dedicated Hiring</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="nav_menu-3" class="_widget widget_nav_menu">
+                            <h3 class="_widget__title">ABOUT</h3>
+                            <div class="menu-about-container">
+                                <ul id="menu-about" class="menu">
+                                    <li id="menu-item-1994" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1994"><a href="about-us.html">About Us</a></li>
+                                    <li id="menu-item-1995" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1995"><a href="how-we-proceed.html">How We Proceed</a></li>
+                                    <li id="menu-item-1996" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1996"><a href="how-we-work.html">How We Work</a></li>
+                                    <li id="menu-item-1997" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1997"><a href="our-capabilities.html">Our Capabilities</a></li>
+                                    <li id="menu-item-1998" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1998"><a href="blog.html">Blog</a></li>
+                                    <li id="menu-item-1999" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1999"><a href="our-clients.html">Clients</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="custom_html-2" class="widget_text _widget widget_custom_html">
+                            <h3 class="_widget__title">OUR ADDRESS</h3>
+                            <div class="textwidget custom-html-widget">
+                                <div class="_widgetBox">
+                                    <div class="_addrBlock">
+                                        <ul>
+                                            <li>
+                                                <strong class="_headingText">KOLKATA H.O.</strong>
+                                                <br> 66, Teachers Colony, Agarpara
+                                                <br> India – Kolkata 700109
+                                            </li>
+                                            <li><a href="mailto:info@Zhizhui Soft.com">info@Zhizhui Soft.com</a></li>
+                                            <li><a href="tel:0919007206290">+91 983686-3282</a></li>
+                                            <li><a href="tel:0918961635454">+91 896-1635-454</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <strong class="_headingText">Our Dubai Office</strong>
+                                                <br>Level 23 Boulevard
+                                                <br>Plaza Tower 2
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="_reviewBox">
+                                        <div class="review " itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+                                            <img src="images/stars.png" alt="Reviews" />
+                                            <br>
+                                            <span itemprop="itemreviewed">Zhizhui Soft</span>&nbsp;
+                                            <br>
+                                            <span itemprop="ratingValue">4.9</span> rating, out of <span itemprop="bestRating">5</span>
+                                            <br> based on <span itemprop="ratingCount">45</span> Client Reviews.
+                                        </div>
+                                        <br />
+                                        <a href="http://www.dmca.com/Protection/Status.aspx?ID=cdaac2cc-5b6a-40ec-b213-e3ce65615c28" title="DMCA.com Protection Status" class="dmca-badge"> <img src="../images.dmca.com/Badges/DMCA_logo-grn-btn100w306a.png?ID=cdaac2cc-5b6a-40ec-b213-e3ce65615c28" alt="DMCA.com Protection Status" /></a>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="_footerLinks__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7 _footerLinks__bottom__left">
+                            <div class="menu-footer-menu-container">
+                                <ul id="menu-footer-menu" class="menu">
+                                    <li id="menu-item-2319" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2319"><a target="_blank" rel="noopener noreferrer" href="wp-content/uploads/2019/08/terms-conditions.pdf">Terms and Conditions</a></li>
+                                    <li id="menu-item-2320" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2320"><a target="_blank" rel="noopener noreferrer" href="wp-content/uploads/2019/08/Cancellation-and-Refund.pdf">Cancelation And Refund Policy</a></li>
+                                    <li id="menu-item-2321" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2321"><a target="_blank" rel="noopener noreferrer" href="wp-content/uploads/2019/08/Privacy-Policy.pdf">Privacy Policy</a></li>
+                                    <li id="menu-item-2322" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2322"><a target="_blank" rel="noopener noreferrer" href="wp-content/uploads/2019/08/Non-disclosure-agreement.pdf">Non-Disclosure Agreement</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-5 _footerLinks__bottom__right">
+                            <p>Copyright 2019 Zhizhui Soft | All Rights Reserved</p>
+                            <ul class="_socialLinks">
+                                <li><a href="https://in.linkedin.com/company/Zhizhui Soft"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="https://www.facebook.com/Zhizhui Soft/"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://twitter.com/Zhizhui Soft?lang=en"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="_scrollupDiv">
+                <span>
+			<img src="images/up-icon.png" alt="" class="img-fluid up-icon-1">
+			<img src="images/up-icon-white.png" alt="" class="img-fluid up-icon-2">
+		</span>
+            </div>
+
+        </div>
+        <!--========== Quick links end  ======== -->
+
+    </footer>
+    <!--==================
+	========FOOTER========
+	================== -->
+
+    <!--=== Time shedule Form Begin == -->
+    <!--==================
+======Form Begin =====
+================== -->
+    <div class="_sForm _sFormOuter">
+        <div class="_sFormClose"><img src="images/close-white.svg" alt=""></div>
+        <div class="_sFormRow row">
+            <div class="col-md-6 _sForm__lft">
+                <div class="_sForm__lft__top">
+                    <figure><img src="images/form-lady-img.png" class="img-fluid"></figure>
+                    <div class="_sForm__lft__text">
+                        <span class="_sForm__heading">Schedule a 15 Min <span class="_sForm__heading__highlight">Consultation</span></span>
+                    </div>
+                </div>
+                <div class="_sForm__lft__bottom">
+                    <span class="_sForm__heading">Talk with an expert on our team start in 2 simple steps</span>
+                    <ul class="_steps">
+                        <li class="_step">1.
+                            <br>Fill the form</li>
+                        <li class="_step">2.
+                            <br>Choose a date & time</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 _sForm__right">
+                <div class="_sForm__right__top">
+                    <span class="_sForm__right__heading">Start Here</span>
+                    <form class="_form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" name="phone" placeholder="Contact Number">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control _datepicker" name="date" placeholder="Date">
+                        </div>
+                        <div class="btn-group">
+                            <button type="submit" class="btn _btnDefault _btnGreen">submit now</button>
+                        </div>
+                        <div class="_loader"></div>
+                        <div class="_form__msg" data-message-success="You’ve Successfully Scheduled a Free Consultation"></div>
+                        <input type="hidden" name="location" value="Schedule Form" />
+                    </form>
+                </div>
+                <div class="_sForm__right__btm">
+                    <ul>
+                        <li class="_sForm__list">
+                            <figure><img src="images/s-form-icon-1.png" alt=""></figure>
+                            <span>Pick a date & time of your choice.</span>
+                        </li>
+                        <li class="_sForm__list">
+                            <figure><img src="images/s-form-icon-2.png" alt=""></figure>
+                            <span>No obligation. Cancel anytime.</span>
+                        </li>
+                        <li class="_sForm__list">
+                            <figure><img src="images/s-form-icon-3.png" alt=""></figure>
+                            <span>Confidentiality guaranteed.</span>
+                        </li>
+                        <li class="_sForm__list">
+                            <figure><img src="images/s-form-icon-4.png" alt=""></figure>
+                            <span>Get real solutions.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================
+=======Form End ======
+================== -->
+<!-- Bootstrap Js link -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+    <!--=== Time shedule Form End ====== -->
+
+    <!--Start of gotlancer.com Script (0.3.3)-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {};
+        var Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.gotlancer.com/5770def462b66351433a272b/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of gotlancer.com Script (0.3.3)-->
+    <script async src="js/script.js"></script>
+  
+
+    <script>
+        "use strict";
+
+        window.addEventListener('load', function(e) {
+
+            jQuery(document).on('submit', '._form', function(e) {
+
+                // stop form from getting submitted
+                e.preventDefault();
+
+                // current form instance
+                var $this = jQuery(this);
+
+                // msg element
+                var $msg = $this.find('._form__msg');
+
+                // loader instance
+                var $loader = $this.find('._loader');
+
+                // form data
+                var data = new FormData($this.get(0));
+
+                // API end point
+                var url = jQuery('meta[name="api-end-point"]').attr('content') + '/form';
+
+                // show loader
+                $loader && $loader.show();
+
+                // // API call
+                axios.post(url, data)
+                    .then(function(response) {
+                        var message = 'Success - Lorem, ipsum dolor sit amet';
+                        if ($msg.data('message-success').length) {
+                            var message = $msg.data('message-success');
+                        }
+                        $msg && $msg.removeClass('_error').addClass('_success').html(message);
+                        jQuery('._fileType__desc').text('');
+                        $this.get(0).reset();
+                    })
+                    .catch(function(error) {
+                        var message = 'Have You Missed a Field?';
+                        if ($msg.data('message-error').length) {
+                            var message = $msg.data('message-success');
+                        }
+                        $msg && $msg.removeClass('_success').addClass('_error').html(message);
+                    })
+                    .finally(function() {
+                        $loader && $loader.hide();
+                    });
+            });
+
+            function loadDatePickerAndInit() {
+                var head = document.getElementsByTagName('head')[0];
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = '../cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js';
+
+                // then bind the event to the callback function
+                // there are several events for cross browser compatibility
+                script.onreadystatechange = datePickerCallback;
+                script.onload = datePickerCallback;
+
+                // fire the loading
+                head.appendChild(script);
+            }
+
+            function datePickerCallback() {
+                jQuery('._datepicker').datepicker({
+                    format: 'yyyy-mm-dd',
+                });
+            }
+
+            loadDatePickerAndInit();
+
+        });
+    </script>
+
+</body>
+
+</html>
